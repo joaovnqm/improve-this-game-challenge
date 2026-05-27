@@ -5,7 +5,7 @@ from batalha import Batalha
 
 
 def main():
-    # Criando heróis e vilões (listas)
+    # Criando heróis e vilões (listas).
     herois = [
         Heroi('Link', 16, 100, ataque=14, defesa=6, poder='Ocarina do Tempo'),
         Heroi('Impa', 28, 90, ataque=12, defesa=8, poder='Espada Ancestral'),
@@ -18,7 +18,7 @@ def main():
 
     npc = NPC('Zelda', 16, 80, 'Princesa')
 
-    # Apresentação inicial com diálogos
+    # Apresentação inicial com diálogos.
     print('\nPersonagens:')
     for heroi in herois:
         print('-', heroi)
@@ -36,7 +36,7 @@ def main():
     input(viloes[0].dialogar(herois[0], 'Hahaha! Você é fraco, Link! Eu sou o poder supremo!'))
     input(herois[0].dialogar(viloes[0], f'Eu não vou desistir! Eu vou lutar até o fim para proteger este reino e as pessoas que amo! {herois[1].nome}, vamos acabar com ele!'))
 
-    # Pergunta se jogador quer modo interativo
+    # Pergunta se jogador quer modo interativo.
     batalha = Batalha(herois, viloes)
     while True:
         escolha = input('Executar batalha em modo interativo? (s/n) > ').strip().lower()
@@ -54,7 +54,7 @@ def main():
     resultado = batalha.run()
     batalha.resumo()
 
-    # Mostrar dicionários dos personagens (exemplo de uso de dicts)
+    # Mostrar dicionários dos personagens.
     print('\nEstado final dos personagens:')
     for heroi in herois:
         print(heroi.to_dict())
